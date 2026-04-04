@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,10 +12,22 @@ const navItems = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
+      style={{ backgroundColor: scrolled ? "rgba(0,0,0,0.85)" : "transparent" }}
+    >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <Link to="/" className="flex flex-col items-start">
           <span className="font-display text-2xl font-bold text-gold-gradient tracking-[0.2em]">
