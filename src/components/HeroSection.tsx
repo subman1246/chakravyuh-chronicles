@@ -6,8 +6,8 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-bg.png')" }}
+        className="absolute inset-0 bg-cover bg-no-repeat"
+        style={{ backgroundImage: "url('/images/hero-bg.png')", backgroundPosition: "center 30%" }}
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
