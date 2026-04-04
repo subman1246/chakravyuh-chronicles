@@ -3,11 +3,16 @@ import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-bg.png')" }}
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('/images/hero-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
