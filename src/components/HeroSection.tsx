@@ -10,14 +10,14 @@ const HeroSection = () => {
         style={{
           backgroundImage: "url('/images/hero-bg.png')",
           backgroundSize: "cover",
-          backgroundPosition: "center 20%",
+          backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
         }}
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto" style={{ paddingTop: "80px" }}>
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}

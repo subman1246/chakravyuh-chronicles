@@ -15,7 +15,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-glass">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <Link to="/" className="flex flex-col items-start">
           <span className="font-display text-2xl font-bold text-gold-gradient tracking-[0.2em]">
