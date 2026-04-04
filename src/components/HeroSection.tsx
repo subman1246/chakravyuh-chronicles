@@ -5,13 +5,17 @@ const HeroSection = () => {
   return (
     <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "100vh", width: "100%" }}>
       {/* Background image */}
-      <div
-        className="absolute inset-0"
+      <img
+        src="/images/hero-bg.png"
+        alt=""
         style={{
-          backgroundImage: "url('/images/hero-bg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
-          backgroundRepeat: "no-repeat",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "top center",
         }}
       />
       {/* Overlay */}
