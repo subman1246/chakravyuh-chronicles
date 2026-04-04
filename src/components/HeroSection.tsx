@@ -18,7 +18,10 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="font-display text-5xl sm:text-7xl md:text-8xl font-bold text-gold-gradient tracking-[0.15em] mb-4">
+          <h1
+            className="font-display font-bold text-gold-gradient tracking-[0.15em] mb-4"
+            style={{ fontSize: "clamp(2rem, 10vw, 8rem)" }}
+          >
             CHAKRAVYUH
           </h1>
           <div className="divider-gold w-64 mx-auto mb-4" />
