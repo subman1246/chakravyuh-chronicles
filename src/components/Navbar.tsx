@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
-  { label: "CSR Initiatives", path: "/csr" },
+  { label: "CSR Initiatives & Educational Sessions", path: "/csr" },
   { label: "Gallery", path: "/gallery" },
 ];
 
@@ -39,12 +39,12 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-8">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`font-display text-sm tracking-[0.15em] uppercase transition-colors duration-300 hover:text-primary ${
+              className={`font-display text-sm tracking-[0.15em] uppercase whitespace-nowrap transition-colors duration-300 hover:text-primary ${
                 location.pathname === item.path ? "text-primary" : "text-foreground/70"
               }`}
             >
@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-glass overflow-hidden"
+            className="lg:hidden bg-glass overflow-hidden"
           >
             <div className="flex flex-col items-center gap-4 py-6">
               {navItems.map((item) => (

@@ -11,7 +11,7 @@ const CSR = () => {
         <div className="container mx-auto max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-gold-gradient tracking-[0.1em] text-center mb-4">
-              CSR Initiatives
+              CSR Initiatives & Educational Sessions
             </h1>
             <div className="divider-gold w-48 mx-auto mb-12" />
             <div className="bg-glass rounded-lg p-8 glow-gold text-center">

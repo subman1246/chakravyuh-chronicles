@@ -19,8 +19,8 @@ const HeroSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <h1
-            className="font-display font-bold text-gold-gradient tracking-[0.15em] mb-4"
-            style={{ fontSize: "clamp(2rem, 10vw, 8rem)" }}
+            className="font-display font-bold text-gold-gradient tracking-[0.15em] mb-4 break-words"
+            style={{ fontSize: "clamp(1.5rem, 8vw, 5rem)" }}
           >
             CHAKRAVYUH
           </h1>
