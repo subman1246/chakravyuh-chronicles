@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
+  { label: "Board", path: "/board" },
   { label: "CSR Initiatives & Educational Sessions", path: "/csr" },
   { label: "Gallery", path: "/gallery" },
 ];
@@ -39,7 +40,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-5 xl:gap-8">
+        <div className="hidden xl:flex items-center gap-5 2xl:gap-8">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -54,7 +55,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="xl:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -65,7 +66,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden bg-glass overflow-hidden"
+            className="xl:hidden bg-glass overflow-hidden"
           >
             <div className="flex flex-col items-center gap-4 py-6">
               {navItems.map((item) => (

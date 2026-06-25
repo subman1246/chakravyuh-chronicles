@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import LiveCounters from "@/components/LiveCounters";
 import CategorySection from "@/components/CategorySection";
+import MagazineSection from "@/components/MagazineSection";
 import JoinAndSuggest from "@/components/JoinAndSuggest";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ const Index = () => {
       </section>
 
       <CategorySection />
+      <MagazineSection />
       <JoinAndSuggest />
       <Footer />
     </div>
